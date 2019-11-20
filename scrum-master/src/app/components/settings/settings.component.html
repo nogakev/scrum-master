@@ -1,0 +1,26 @@
+<div id="settings-board" class="settings-board">
+    <mat-card-content>
+		<mat-card-content>
+			<b>Full Name:</b><br>
+			{{fullname}}<br><br>
+			
+			<b>Email:</b><br>
+			{{email}}<br><br>
+			
+			<!-- TEMPORARY -->
+			<b><em>User Types:</em></b><br><br>
+			
+			<!-- Do we want to change this based on project? Might be too complicated... -->
+			<b>User Types:</b>
+			<section id="user-types">
+				<form>
+					<section *ngFor="let item of items">
+						<span class="entry"><mat-checkbox name=softdev (change)="recordChanges(item.label, $event)">{{item.label}}</mat-checkbox></span> <br>
+					</section><br>
+					
+					<button mat-raised-button (click)="submitChanges()">Save Changes</button>
+				</form>
+			</section>
+		</mat-card-content>
+	</mat-card-content>
+</div>

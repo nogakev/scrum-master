@@ -1,0 +1,33 @@
+<nav class="header-right" id="header-right">
+        <mat-tab-group>
+            <mat-tab label="Issue Board">
+                    <app-board></app-board>
+            </mat-tab>
+            <mat-tab label="MyTasks">
+                <table-overview-example></table-overview-example>
+            </mat-tab>
+            <mat-tab label="Members">
+                <app-members-list></app-members-list>
+            </mat-tab>
+            <!-- Available to Scrum masters only -->
+            <mat-tab label="Daily Scrum" disabled>
+                <!-- PLACE SOMETHING HERE LATER -->
+            </mat-tab>
+        </mat-tab-group>
+</nav>
+
+<nav class="header-right-home" id="header-right-home" style="display: none;">
+        <mat-tab-group>
+            <mat-tab label="Home" disabled>
+                    <app-home></app-home>
+            </mat-tab>
+        </mat-tab-group>
+</nav>
+
+<nav class="header-right-settings" id="header-right-settings" style="display: none;">
+        <mat-tab-group>
+            <mat-tab label="Account Settings" disabled>
+                    <app-settings></app-settings>
+            </mat-tab>
+        </mat-tab-group>
+</nav>

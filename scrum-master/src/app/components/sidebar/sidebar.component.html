@@ -1,0 +1,31 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="side" opened>
+	<div class="sidenav-header">
+		<img src="https://i.pinimg.com/736x/dc/f4/d9/dcf4d97eec963dfbe6de815a7ca60910--cosmetic-logo-logo-m.jpg" alt="SM" height="28px" width="28px" style="vertical-align: text-top">
+		<span id="username">{{username}}</span><br>
+		<div id="user-status">Software Developer</div>
+	</div>
+	
+	<mat-nav-list>
+		<a mat-list-item id="home" class="links" (click)="switchToHome()">Home</a>
+		<a mat-list-item id="noti" class="links">Notifications</a>
+		<a mat-list-item id="proj" class="links" (click)="switchToProject()" style="font-weight: bold;">Projects</a>
+		<a mat-list-item id="cale" class="links">Calendar</a>
+		<a mat-list-item id="sett" class="links"(click)="switchToSettings()">Settings</a>
+		<a mat-list-item id="sign" class="links" (click)="signOut()">Sign Out</a>
+	</mat-nav-list>
+  </mat-sidenav>
+  
+  <mat-sidenav-content>
+	<button (click)="sidenav.toggle()" id="hamburger-button">
+		<div class="hamburger-menu"></div>
+        <div class="hamburger-menu"></div>
+        <div class="hamburger-menu"></div>
+	</button>
+	<span id="page-title">ScrumMaster</span>
+	<div class="search-bar">
+		<input matInput class="search" type="text" placeholder="Search">
+	</div>
+	<app-header></app-header>
+  </mat-sidenav-content>
+</mat-sidenav-container>
